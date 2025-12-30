@@ -1,6 +1,6 @@
 {
   "name": "react-smart-calendar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reusable calendar component for React with month and year navigation",
   "type": "module",
   "main": "./dist/index.js",
@@ -33,7 +33,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NAVIKNITIN/react-calendar"
+    "url": "git+https://github.com/NAVIKNITIN/react-calendar.git"
   },
   "scripts": {
     "dev": "vite",
