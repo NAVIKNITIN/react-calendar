@@ -6,6 +6,7 @@ import {
   isCurrentMonth,
 } from '../utils/calendarUtils'
 import './Calendar.css'
+import 'react-smart-calendar/style.css'
 
 export interface CalendarProps {
   /** The selected date to highlight */

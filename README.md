@@ -122,6 +122,49 @@ function MyCalendar() {
 - React 18.0.0 or higher
 - React DOM 18.0.0 or higher
 
+## Troubleshooting
+
+### Styles Not Appearing
+
+If the calendar appears without styles (days displayed vertically, no colors, etc.), make sure you've imported the CSS:
+
+```tsx
+import "react-smart-calendar/style.css";
+```
+
+**Important:** This import must be in your main entry file (e.g., `main.tsx`, `index.tsx`, or `App.tsx`), not just in the component file where you use `<Calendar />`.
+
+### For Vite Projects
+
+If you're using Vite and styles still don't work, ensure your `vite.config.ts` can process CSS from node_modules. This should work by default, but if not, you may need to add:
+
+```ts
+// vite.config.ts
+export default defineConfig({
+  // ... your config
+  css: {
+    postcss: {}, // or your PostCSS config
+  },
+})
+```
+
+### For Create React App
+
+CSS imports should work automatically. If not, try importing in your `index.js` or `App.js`:
+
+```js
+import "react-smart-calendar/style.css";
+```
+
+### For Next.js
+
+Import the CSS in your `_app.js` or `_app.tsx`:
+
+```tsx
+// pages/_app.tsx or app/layout.tsx
+import "react-smart-calendar/style.css";
+```
+
 ## License
 
 MIT

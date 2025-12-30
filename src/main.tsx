@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { useState } from 'react'
 import Calendar from './components/Calendar'
 import './components/Calendar.css'
+import 'react-smart-calendar/style.css'
 
 // Export App for Fast Refresh
 export function App() {
