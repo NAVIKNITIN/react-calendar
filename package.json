@@ -33,7 +33,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codewithnitin/react-calendar.git"
+    "url": "git+https://github.com/NAVIKNITIN/react-calendar"
   },
   "scripts": {
     "dev": "vite",
