@@ -5,8 +5,8 @@ import {
   isSameDay,
   isCurrentMonth,
 } from '../utils/calendarUtils'
+import { injectCalendarStyles } from '../utils/injectStyles'
 import './Calendar.css'
-import 'react-smart-calendar/style.css'
 
 export interface CalendarProps {
   /** The selected date to highlight */
@@ -46,6 +46,11 @@ const Calendar = ({ date, onDateChange, viewDate: controlledViewDate, onViewChan
   const dateYear = date.getFullYear()
   const dateMonth = date.getMonth()
   
+  // Inject styles automatically when component mounts
+  useEffect(() => {
+    injectCalendarStyles()
+  }, [])
+
   useEffect(() => {
     if (!isControlled) {
       const currentViewYear = internalViewDate.getFullYear()

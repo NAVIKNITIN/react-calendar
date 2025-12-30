@@ -21,18 +21,13 @@ npm install react-smart-calendar
 
 ## Usage
 
-> **⚠️ Important:** You must import the CSS file separately for styles to work:
->
-> ```tsx
-> import "react-smart-calendar/style.css";
-> ```
+> **✨ Styles are automatically injected!** You don't need to import CSS separately. The component handles styles automatically.
 
 ### Default Import (Recommended)
 
 ```tsx
 import { useState } from "react";
 import Calendar from "react-smart-calendar";
-import "react-smart-calendar/style.css";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -46,13 +41,21 @@ function App() {
 ```tsx
 import { useState } from "react";
 import { Calendar } from "react-smart-calendar";
-import "react-smart-calendar/style.css";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   return <Calendar date={selectedDate} onDateChange={setSelectedDate} />;
 }
+```
+
+### Manual CSS Import (Optional)
+
+If you prefer to import CSS manually or need more control, you can still import it:
+
+```tsx
+import Calendar from "react-smart-calendar";
+import "react-smart-calendar/style.css"; // Optional - styles are auto-injected
 ```
 
 ## Props
@@ -72,7 +75,6 @@ function App() {
 
 ```tsx
 import Calendar from "react-smart-calendar";
-import "react-smart-calendar/style.css";
 
 function MyCalendar() {
   return <Calendar date={new Date()} />;
@@ -84,7 +86,6 @@ function MyCalendar() {
 ```tsx
 import { useState } from "react";
 import Calendar from "react-smart-calendar";
-import "react-smart-calendar/style.css";
 
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
@@ -100,7 +101,6 @@ Control both the selected date and the displayed month/year:
 ```tsx
 import { useState } from "react";
 import Calendar from "react-smart-calendar";
-import "react-smart-calendar/style.css";
 
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
@@ -126,13 +126,14 @@ function MyCalendar() {
 
 ### Styles Not Appearing
 
-If the calendar appears without styles (days displayed vertically, no colors, etc.), make sure you've imported the CSS:
+Styles are automatically injected when the Calendar component mounts. If styles don't appear:
 
-```tsx
-import "react-smart-calendar/style.css";
-```
-
-**Important:** This import must be in your main entry file (e.g., `main.tsx`, `index.tsx`, or `App.tsx`), not just in the component file where you use `<Calendar />`.
+1. **Check browser console** for any JavaScript errors
+2. **Verify the component is rendering** - styles are injected on mount
+3. **Manual CSS import** - If automatic injection fails, you can manually import:
+   ```tsx
+   import "react-smart-calendar/style.css";
+   ```
 
 ### For Vite Projects
 
