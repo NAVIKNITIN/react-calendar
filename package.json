@@ -1,6 +1,6 @@
 {
   "name": "react-smart-calendar",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A reusable calendar component for React with month and year navigation",
   "type": "module",
   "main": "./dist/index.js",
