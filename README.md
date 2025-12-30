@@ -21,6 +21,12 @@ npm install react-smart-calendar
 
 ## Usage
 
+> **⚠️ Important:** You must import the CSS file separately for styles to work:
+>
+> ```tsx
+> import "react-smart-calendar/style.css";
+> ```
+
 ### Default Import (Recommended)
 
 ```tsx
